@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Webpack App</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <child-component v-show="showChild"></child-component>
+    </div>
+    <script>
+        Vue.component('child-component', {
+          template: '<div>子组件</div>'
+        });
+
+        var app = new Vue({
+          el: '#app',
+          data: {
+              showChild: true
+          }
+        })
+    </script>
+  </script>
+</body>
+</html>
